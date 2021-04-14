@@ -1,13 +1,13 @@
 {
   "name": "bp/",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Shortlinks for Blueprint",
   "manifest_version": 2,
   "background": {
     "scripts": ["background.js"],
     "persistent": true
   },
-  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "tabs"],
   "chrome_settings_overrides": {
     "search_provider": {
       "name": "bp/",
