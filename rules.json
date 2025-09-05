@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://go.calblueprint.org/?q="
+      }
+    },
+    "condition": {
+      "urlFilter": "bp/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://go.calblueprint.org/?q=\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^http://bp/(.*)$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://go.calblueprint.org/?q=\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://bp/(.*)$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
